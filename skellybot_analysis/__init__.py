@@ -9,3 +9,10 @@ __package_name__ = "skellybot_analysis"
 __repo_url__ = f"https://github.com/freemocap/{__package_name__}/"
 __repo_issues_url__ = f"{__repo_url__}issues"
 
+import logging
+
+from skellybot_analysis.system.logging_configuration.configure_logging import configure_logging
+from skellybot_analysis.system.logging_configuration.logger_builder import LogLevels
+
+logger = logging.getLogger(__name__)
+configure_logging(LogLevels.TRACE)

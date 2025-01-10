@@ -5,7 +5,7 @@ from fastapi import APIRouter
 logger = logging.getLogger(__name__)
 ingesters_router = APIRouter()
 
-@ingesters_router.get("/ingesters/pdf", summary="Hello👋")
+@ingesters_router.get("/pdf", summary="Hello👋")
 def pdf_ingestion_endpoint():
     """
     A simple endpoint to greet the user of the SkellyBot Analysis API.
@@ -14,7 +14,8 @@ def pdf_ingestion_endpoint():
     """
 
     logger.api("Hello requested! Deploying Hello!")
-    return HELLO_FROM_SKELLYBOT_ANALYSIS_BACKEND_MESSAGE
+    
+    return "hi."
 
 
 # @connect_cameras_router.post(

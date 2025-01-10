@@ -3,6 +3,7 @@
 from skellybot_analysis.api.http.app.health import health_router
 from skellybot_analysis.api.http.app.shutdown import app_shutdown_router
 from skellybot_analysis.api.http.app.state import state_router
+from skellybot_analysis.api.http.ingesters.ingesters_router import ingesters_router
 from skellybot_analysis.api.http.ui.ui_router import ui_router
 from skellybot_analysis.api.websocket.websocket_connect import skellybot_analysis_websocket_router
 
@@ -16,6 +17,9 @@ SKELLYBOT_ANALYSIS_ROUTERS = {
         "health": health_router,
         "state": state_router,
         "shutdown": app_shutdown_router
+    },
+    "/ingesters": {
+        "pdf": ingesters_router
     },
     "/websocket": {
         "connect": skellybot_analysis_websocket_router
