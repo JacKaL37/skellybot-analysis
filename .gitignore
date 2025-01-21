@@ -162,4 +162,13 @@ cython_debug/
 .idea/
 /skellybot_analysis/utilities/example_output.json
 
-out/
+*.ogg
+*.mp3
+*.wav
+*.flac
+*.aiff
+*.au
+*.m4a
+*.mp4
+*.mov
+*.avi

@@ -84,7 +84,7 @@ class GraphControls {
 
     initializeControls() {
         return {
-            [GUIFields.GRAPH_DATA]: 'datasets/graph_data.json',
+            [GUIFields.GRAPH_DATA]: 'datasets/test_graph_data.json',
             [GUIFields.CONTROL_TYPE]: 'fly',
             [GUIFields.AUTO_COLOR_BY]: 'type',
             [GUIFields.DAG_TREE_ORIENTATION]: 'radialout',
@@ -111,7 +111,14 @@ class GraphControls {
     }
 
     addGraphDataControl(gui) {
-        gui.add(this.controls, GUIFields.GRAPH_DATA, ['datasets/graph_data.json', 'graph_data_full.json', 'graph_data_short_threads.json', 'test_graph_data.json'])
+        gui.add(this.controls, GUIFields.GRAPH_DATA, [
+            'datasets/test_graph_data.json',
+            'datasets/HMN-Fall24_graph_data.json',
+            'datasets/HMN_Fall24_2024-12-03T06-19-40_graph_data.json',
+            'datasets/skb-test_graph_data.json',
+            'datasets/forcegraph-dependencies.json',
+            'datasets/miserables.json',
+            ])
             .onChange(url => this.graph && this.graph.jsonUrl(url));
     }
 
