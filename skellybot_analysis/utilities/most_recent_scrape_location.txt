@@ -1,1 +1,1 @@
-out/SkellyBot-Dev-JKL_data/SkellyBot-Dev-JKL_2025-01-13T20-43-20/raw_data/SkellyBot-Dev-JKL_2025-01-13T20-43-20_server_data.json
+C:\Users\jonma\Sync\skellybot-data\H_M_N_2_5_data\H_M_N_2_5_2025-01-07T13-29-03\raw_data\H_M_N_2_5_2025-01-07T13-29-03_server_data.json

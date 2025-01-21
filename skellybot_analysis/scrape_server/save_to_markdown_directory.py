@@ -4,7 +4,9 @@ from pathlib import Path
 from skellybot_analysis.models.data_models.server_data.server_data_sub_object_models import ChatThread, ChannelData, CategoryData
 from skellybot_analysis.models.data_models.tag_models import TagManager
 from skellybot_analysis.models.data_models.user_data_model import UserDataManager, UserData
+from skellybot_analysis.system.logging_configuration.configure_logging import configure_logging
 
+configure_logging()
 from skellybot_analysis.models.data_models.server_data.server_data_model import ServerData, EXCLUDED_USER_IDS
 from skellybot_analysis.utilities.get_most_recent_server_data import get_server_data
 from skellybot_analysis.utilities.sanitize_filename import sanitize_name
