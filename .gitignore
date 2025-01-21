@@ -174,4 +174,7 @@ cython_debug/
 *.avi
 
 
-/skellybot_analysis/utilities/most_recent_scrape_location.txt
+./skellybot_analysis/utilities/most_recent_scrape_location.txt
+
+out/**
+
