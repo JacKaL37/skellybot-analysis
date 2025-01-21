@@ -24,13 +24,14 @@ def get_checkpoint_name(server_name:str):
 async def get_reaction_tagged_messages(channel: discord.TextChannel, target_emoji: str) -> list[DiscordContentMessage]:
     logger.info(f"Getting bot prompt messages from channel: {channel.name}")
     prompt_messages = []
-    async for message in channel.history(limit=None, oldest_first=True):
-        if message.reactions:
-            for reaction in message.reactions:
-                if reaction.emoji == target_emoji:
-                    logger.info(
-                        f"Found message with target emoji {target_emoji} with content:\n\n{message.clean_content}")
-                    prompt_messages.append(await    DiscordContentMessage.from_discord_message(message))
+    if not isinstance(channel, discord.CategoryChannel):
+        async for message in channel.history(limit=None, oldest_first=True):
+            if message.reactions:
+                for reaction in message.reactions:
+                    if reaction.emoji == target_emoji:
+                        logger.info(
+                            f"Found message with target emoji {target_emoji} with content:\n\n{message.clean_content}")
+                        prompt_messages.append(await    DiscordContentMessage.from_discord_message(message))
 
     logger.info(f"Found {len(prompt_messages)} messages with target emoji {target_emoji} in channel: {channel.name}")
     return prompt_messages
