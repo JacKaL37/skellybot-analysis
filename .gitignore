@@ -172,3 +172,6 @@ cython_debug/
 *.mp4
 *.mov
 *.avi
+
+
+/skellybot_analysis/utilities/most_recent_scrape_location.txt
